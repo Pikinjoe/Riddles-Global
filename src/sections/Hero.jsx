@@ -9,11 +9,10 @@ const Hero = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState ===2) {
-        setCurrentState(0)
-      } else {
-        setCurrentState(currentState + 1)
-      }
+      setCurrentState((prevState) => 
+        (prevState === imageSlides.length - 1 ?
+         0 : prevState + 1));
+
     }, 5000);
     return () => clearTimeout(timer)
   },[currentState])
@@ -37,7 +36,7 @@ const Hero = () => {
     <section id='home'
     className='w-full h-screen '>
       <img src={imageSlides[currentState].image} alt="" className='object-cover w-full h-full '/>
-      <div className='absolute w-full h-full top-0 flex flex-col justify-center mx-4 lg:mx-32 z-10'>
+      <div className='absolute h-screen top-0 flex flex-col justify-center mx-4 lg:mx-32 z-10'>
         <h1 className='capitalize font-extrabold text-4xl text-cyan-100 lg:text-6xl'>{imageSlides[currentState].title}</h1>
         <p className='capitalize font-medium text-cyan-100 text-xl py-5'>{imageSlides[currentState].body}</p>
         <a href={imageSlides[currentState].link} target='_blank' className='capitalize bg-black text-yellow-500 w-40 h-16 flex justify-center items-center rounded-lg text-xl hover:text-black hover:bg-yellow-500 hover:font-medium ease-linear duration-200'>learn more</a>
