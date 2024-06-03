@@ -34,8 +34,9 @@ const Hero = () => {
 
   return (
     <section id='home'
-    className='w-full h-screen '>
-      <img src={imageSlides[currentState].image} alt="" className='object-cover w-full h-full '/>
+    className='w-full h-full overflow-hidden'>
+      
+      <img key={currentState} src={imageSlides[currentState].image} alt="" className='object-cover w-full h-screen animate-zoom'/>
       <div className='absolute h-screen top-0 flex flex-col justify-center mx-4 lg:mx-32 z-10'>
         <h1 className='capitalize font-extrabold text-4xl text-cyan-100 lg:text-6xl'>{imageSlides[currentState].title}</h1>
         <p className='capitalize font-medium text-cyan-100 text-xl py-5'>{imageSlides[currentState].body}</p>
@@ -51,7 +52,7 @@ const Hero = () => {
         <img src={arrowleft} alt="left arrow logo" width={20} onClick={prevSlide}/>
         </div>
       </div>
-      <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50'></div>
+      <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 overflow-hidden'></div>
     </section>
   )
 }

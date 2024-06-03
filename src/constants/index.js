@@ -3,6 +3,9 @@ import solar from '../assets/Images/solar.jpg'
 import bread from '../assets/Images/Bread.jpg'
 import construction from '../assets/Images/Construction.jpg'
 import board from '../assets/Images/Board-meeting.jpg'
+import facebook from '../assets/Icons/facebook.svg'
+import linkedin from '../assets/Icons/linkedin.svg'
+import twitter from '../assets/Icons/twitter.svg'
 
 
 export const navLinks = [
@@ -12,6 +15,19 @@ export const navLinks = [
     {href: '#services', label: 'Services'},
     {href: '#contact-us', label: 'Contact Us'},
 ];
+
+export const socialLinks = [
+  {href: 'https://facebook.com',
+    icon: facebook
+  },
+  {href: 'https://twitter.com',
+  icon: twitter
+},
+{href: 'https://linkedin.com',
+icon: linkedin
+},
+
+]
 
 export const imageSlides = [
     {image: skyScraper,
