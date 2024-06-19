@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <section id='home'
-    className='w-full h-full overflow-hidden'>
+    className='w-full h-screen overflow-hidden relative'>
       
       <img key={currentState} src={imageSlides[currentState].image} alt="" className='object-cover w-full h-screen animate-zoom'/>
       <div className='absolute h-screen top-0 flex flex-col justify-center mx-4 lg:mx-32 z-10'>
@@ -44,14 +44,14 @@ const Hero = () => {
       </div>
 
       {/* Background arrow button control */}
-      <div className='absolute bottom-60 right-24 lg:right-96 flex flex-col space-y-8 z-20'>
-        <div className='w-10 h-10 flex justify-center items-center bg-black bg-opacity-40 hover:bg-opacity-75 lg:w-16 lg:h-16 rounded-full cursor-pointer'>
-        <img src={arrowRight} alt="right arrow logo" width={20} onClick={nextSlide}/>
+        <div className='absolute bottom-60 right-24 lg:right-96 flex flex-col space-y-8 z-20'>
+          <div className='w-10 h-10 flex justify-center items-center bg-black bg-opacity-40 hover:bg-opacity-75 lg:w-16 lg:h-16 rounded-full cursor-pointer'>
+          <img src={arrowRight} alt="right arrow logo" width={20} onClick={nextSlide}/>
+          </div>
+          <div className='w-10 h-10 flex justify-center items-center bg-black bg-opacity-40 hover:bg-opacity-75 lg:w-16 lg:h-16 rounded-full cursor-pointer'>
+          <img src={arrowleft} alt="left arrow logo" width={20} onClick={prevSlide}/>
+          </div>
         </div>
-        <div className='w-10 h-10 flex justify-center items-center bg-black bg-opacity-40 hover:bg-opacity-75 lg:w-16 lg:h-16 rounded-full cursor-pointer'>
-        <img src={arrowleft} alt="left arrow logo" width={20} onClick={prevSlide}/>
-        </div>
-      </div>
       <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 overflow-hidden'></div>
     </section>
   )

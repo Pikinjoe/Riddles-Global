@@ -6,6 +6,11 @@ import board from '../assets/Images/Board-meeting.jpg'
 import facebook from '../assets/Icons/facebook.svg'
 import linkedin from '../assets/Icons/linkedin.svg'
 import twitter from '../assets/Icons/twitter.svg'
+import solarpanel from '../assets/Images/solar-50.png'
+import service from '../assets/Images/service-50.png'
+import constructionlogo from '../assets/Images/construction-80.png'
+
+
 
 
 export const navLinks = [
@@ -54,5 +59,26 @@ export const imageSlides = [
       title: 'beyond boundaries 5',
       body: 'Lorem ipsum dolor sit amet',
       link: '#'
+    },
+  ]
+
+  export const services = [
+    {image:solar,
+      title1:'Solar/' ,
+      title2: 'Clean Energy',
+      icon:solarpanel,
+      link:'#'
+    },
+    {image:board,
+      title1:'General' ,
+      title2: 'Services',
+      icon:service,
+      link:'#'
+    },
+    {image:construction,
+      title1:'Construction' ,
+      title2: 'Services',
+      icon:constructionlogo,
+      link:'#'
     },
   ]

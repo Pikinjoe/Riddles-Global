@@ -15,7 +15,7 @@ const Nav = () => {
     setNav(!nav)
   }
   return (
-    <header className=' py-2 border-b-2 border-b-gray-400 bg-black bg-opacity-50 absolute z-20 w-full '>
+    <header className=' py-2 border-b-2 border-b-gray-400 bg-black bg-opacity-50 fixed z-20 w-full '>
       <nav className='flex justify-between items-center w-5/6 mx-auto lg:w-11/12'>
       <a href="#">
         <img src={Logo}
